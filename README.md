@@ -10,4 +10,4 @@
 
 ## Installation
 
-**Coming Soon!**
+Copy the plugin to your plugin directory on WindowsGSM.  
