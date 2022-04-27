@@ -8,7 +8,7 @@ using WindowsGSM.GameServer.Query;
 
 namespace WindowsGSM.Plugins
 {
-    public class interstellar_rift : SteamCMDAgent // SteamCMDAgent is used because the_forest relies on SteamCMD for installation and update process
+    public class interstellar_rift : SteamCMDAgent // SteamCMDAgent is used because interstellar_rift relies on SteamCMD for installation and update process
     {
         // - Plugin Details
         public Plugin Plugin = new Plugin
@@ -46,7 +46,6 @@ namespace WindowsGSM.Plugins
         public string QueryPort = "27016"; // Default query port
         public string Defaultmap = "empty"; // Default map name
         public string Maxplayers = "64"; // Default maxplayers
-        public string Additional = "-profiles=the_forestHosts -config=server.cfg"; // Additional server start parameter
 
 
         // - Create a default cfg for the game server after installation
@@ -91,6 +90,6 @@ namespace WindowsGSM.Plugins
 
 
         // - Stop server function
-        public async Task Stop(Process p) => await Task.Run(() => { p.Kill(); }); // I believe the_forest doesn't have a proper way to stop the server so just kill it
+        public async Task Stop(Process p) => await Task.Run(() => { p.Kill(); }); // I believe interstellar_rift doesn't have a proper way to stop the server so just kill it
     }
 }
